@@ -19,9 +19,12 @@ public class PlayerController : MonoBehaviour
 
     public float Speed { get => speed; set => speed = Mathf.Clamp(value, 0, 10); }
 
+    AnimationHandler animationHandler;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        animationHandler = GetComponent<AnimationHandler>();
     }
 
     // Start is called before the first frame update
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
         direction = direction * Speed;
 
         _rigidbody.velocity = direction;
+        animationHandler.Move(direction);
     }
 
     private void OnMove(InputValue inputValue)
