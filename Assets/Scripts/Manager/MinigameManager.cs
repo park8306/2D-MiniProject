@@ -19,8 +19,8 @@ public class MinigameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            UnityEngine.Debug.Log(path);
-            Process.Start(path + "FlappyPlane.exe");
+            //UnityEngine.Debug.Log(path);
+            //Process.Start(path + "FlappyPlane.exe");
 
         }
     }

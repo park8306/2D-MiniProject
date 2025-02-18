@@ -23,12 +23,18 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private bool isMinigameZone;    // 미니게임 존에 있는지 판단하는 변수
     public bool IsMinigameZone { get => isMinigameZone; set => isMinigameZone = value; }
+
+    UIManager uiManager;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         animationHandler = GetComponent<AnimationHandler>();
     }
 
+    private void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
         if(IsMinigameZone && Input.GetKeyDown(KeyCode.Space))
         {
             // 미니게임 UI 실행
+            uiManager.ActiveState();
         }
     }
 
