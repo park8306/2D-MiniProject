@@ -41,12 +41,13 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(movementDirection);
         Movement(movementDirection);
     }
 
     private void Look(Vector2 direction)
     {
+        if (direction.magnitude < .5f) return;
+
         if (direction.x > 0)
             characterTr.rotation = Quaternion.Euler(0, 180, 0);
         else
