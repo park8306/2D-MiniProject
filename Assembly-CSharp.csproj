@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Player\AnimationHandler.cs" />
     <Compile Include="Assets\MiniGames\Script\GameManager.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
+    <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\MiniGames\Script\BgLooper.cs" />
