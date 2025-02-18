@@ -3,30 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+
+namespace Flappy
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI restartText;
-
-    // Start is called before the first frame update
-    void Start()
+    public class UIManager : MonoBehaviour
     {
-        if (restartText == null)
-            Debug.Log("restart text is null");
+        public TextMeshProUGUI scoreText;
+        public TextMeshProUGUI restartText;
 
-        if (scoreText == null)
-            Debug.Log("score text is null");
+        // Start is called before the first frame update
+        void Start()
+        {
+            if (restartText == null)
+                Debug.Log("restart text is null");
 
-        restartText.gameObject.SetActive(false);
-    }
+            if (scoreText == null)
+                Debug.Log("score text is null");
 
-    public void SetRestart()
-    {
-        restartText.gameObject.SetActive(true);
-    }
+            restartText.gameObject.SetActive(false);
+        }
 
-    public void UpdateScore(int score)
-    {
-        scoreText.text = score.ToString();
+        public void SetRestart()
+        {
+            restartText.gameObject.SetActive(true);
+        }
+
+        public void UpdateScore(int score)
+        {
+            scoreText.text = score.ToString();
+        }
     }
 }

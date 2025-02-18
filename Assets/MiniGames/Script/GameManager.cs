@@ -1,44 +1,48 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+namespace Flappy
 {
-    static GameManager gameManager;
-    public static GameManager Instance { get { return gameManager; } }
 
-    private int currentScore = 0;
-
-    UIManager uiManager;
-    
-    public UIManager UIManager { get { return uiManager; } }
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        gameManager = this;
-        uiManager = FindObjectOfType<UIManager>();
-    }
+        static GameManager gameManager;
+        public static GameManager Instance { get { return gameManager; } }
 
-    private void Start()
-    {
-        UIManager.UpdateScore(0);
-    }
+        private int currentScore = 0;
 
-    public void GameOver()
-    {
-        Debug.Log("Game Over");
-        uiManager.SetRestart();
-    }
+        UIManager uiManager;
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+        public UIManager UIManager { get { return uiManager; } }
 
-    public void AddScore(int score)
-    {
-        currentScore += score;
-        Debug.Log("Score : "+ currentScore);
+        private void Awake()
+        {
+            gameManager = this;
+            uiManager = FindObjectOfType<UIManager>();
+        }
 
-        UIManager.UpdateScore(currentScore);
+        private void Start()
+        {
+            UIManager.UpdateScore(0);
+        }
+
+        public void GameOver()
+        {
+            Debug.Log("Game Over");
+            uiManager.SetRestart();
+        }
+
+        public void RestartGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public void AddScore(int score)
+        {
+            currentScore += score;
+            Debug.Log("Score : " + currentScore);
+
+            UIManager.UpdateScore(currentScore);
+        }
     }
 }
