@@ -21,22 +21,22 @@ public class PlayerController : MonoBehaviour
 
     AnimationHandler animationHandler;
 
+    [SerializeField] private bool isMinigameZone;    // 미니게임 존에 있는지 판단하는 변수
+    public bool IsMinigameZone { get => isMinigameZone; set => isMinigameZone = value; }
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         animationHandler = GetComponent<AnimationHandler>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         Look(movementDirection);
+        if(IsMinigameZone && Input.GetKeyDown(KeyCode.Space))
+        {
+            // 미니게임 UI 실행
+        }
     }
 
     private void FixedUpdate()

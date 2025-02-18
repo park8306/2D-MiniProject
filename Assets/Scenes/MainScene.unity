@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 322233640}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterTr: {fileID: 1210297737169238109}
   speed: 3
+  isMinigameZone: 0
 --- !u!61 &322233643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -459,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382049197978197270, guid: 2065ee54c1995b4428d6faac48e88954,
+        type: 3}
+      propertyPath: playerController
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
