@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Object\MinigamePortal.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_SpriteList.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\UIManager.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\GameUI.cs" />
     <Compile Include="Assets\Scripts\Player\AnimationHandler.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Obstacle.cs" />
@@ -71,7 +73,9 @@
     <Compile Include="Assets\Scripts\UI\FlappyPlaneStartUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Manager\UIManager.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\TheStack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\HomeUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Scripts\Manager\MinigameManager.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\Ect\SpritePos.cs" />
@@ -82,14 +86,17 @@
     <Compile Include="Assets\MiniGames\Flappy\Script\BgLooper.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\EndUI.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Button.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\DestroyZone.cs" />
     <Compile Include="Assets\Scripts\UI\BaseUI.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\BaseUI.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\ScoreUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\FlappyPlaneResultUI.cs" />
     <Compile Include="Assets\Externals\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_HorseSpriteList.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\BaseUI.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Player.cs" />
   </ItemGroup>
   <ItemGroup>
