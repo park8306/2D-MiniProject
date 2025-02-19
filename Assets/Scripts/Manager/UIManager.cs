@@ -8,7 +8,8 @@ public enum MinigameState
     None,
     FlappyStart,
     FlappyResult,
-    Stack,
+    StackStart,
+    StackResult,
     Count
 }
 
@@ -16,6 +17,9 @@ public class UIManager : MonoBehaviour
 {
     FlappyPlaneStartUI flappyUI;
     FlappyPlaneResultUI flappyResultUI;
+
+    //StackStartUI stackStartUI;
+    //StackResultUI stackResultUI;
 
     private MinigameState minigameState;
 
@@ -26,6 +30,12 @@ public class UIManager : MonoBehaviour
 
         flappyResultUI = GetComponentInChildren<FlappyPlaneResultUI>(true);
         flappyResultUI.Init(this);
+
+        //stackStartUI = GetComponentInChildren<StackStartUI>(true);
+        //stackStartUI.Init(this);
+
+        //stackResultUI = GetComponentInChildren<StackResultUI>(true);
+        //stackResultUI.Init(this);
 
         ChangeState(MinigameState.None);
     }
@@ -40,11 +50,6 @@ public class UIManager : MonoBehaviour
         minigameState = minigame;
         flappyUI.SetActive(minigameState);
         flappyResultUI.SetActive(minigameState);
-    }
-
-    public void ActiveState()
-    {
-        flappyUI.SetActive(minigameState);
     }
 
     public void SetFlappyResultUI(int flappyCurrentScore, bool isGoalSuccess)

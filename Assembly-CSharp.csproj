@@ -87,9 +87,11 @@
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\EndUI.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Button.cs" />
     <Compile Include="Assets\MiniGames\Stack\Script\DestroyZone.cs" />
+    <Compile Include="Assets\Scripts\UI\StackResultUI.cs" />
     <Compile Include="Assets\Scripts\UI\BaseUI.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\BaseUI.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\UI\StackStartUI.cs" />
     <Compile Include="Assets\MiniGames\Stack\Script\ScoreUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Manager\GameManager.cs" />
