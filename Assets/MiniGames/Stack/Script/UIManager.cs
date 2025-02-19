@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Stack
 {
@@ -23,7 +24,7 @@ namespace Stack
         UIState currentState = UIState.Home;
         HomeUI homeUI = null;
         GameUI gameUI = null;
-        ScoreUI scoreUI = null;
+        GameOverUI gameOverUI = null;
 
         TheStack theStack = null;
 
@@ -39,8 +40,8 @@ namespace Stack
             gameUI = GetComponentInChildren<GameUI>(true);
             gameUI?.Init(this);
 
-            scoreUI = GetComponentInChildren<ScoreUI>(true);
-            scoreUI?.Init(this);
+            gameOverUI = GetComponentInChildren<GameOverUI>(true);
+            gameOverUI?.Init(this);
 
             ChangeState(UIState.Home);
         }
@@ -50,7 +51,7 @@ namespace Stack
             currentState = state;
             homeUI?.SetActive(currentState);
             gameUI?.SetActive(currentState);
-            scoreUI?.SetActive(currentState);
+            gameOverUI?.SetActive(currentState);
         }
 
         public void OnClickStart()
@@ -61,11 +62,7 @@ namespace Stack
 
         public void OnClickExit()
         {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+            SceneManager.LoadScene("MainScene");
         }
 
         public void UpdateScore()
@@ -75,7 +72,8 @@ namespace Stack
 
         public void SetScoreUI()
         {
-            scoreUI.SetUI(theStack.Score, theStack.MaxCombo, theStack.BestScore, theStack.BestCombo);
+            bool isGoal = theStack.Score >= theStack.GoalScore;
+            gameOverUI.SetUI(theStack.Score, theStack.MaxCombo, theStack.BestScore, theStack.BestCombo, isGoal);
             ChangeState(UIState.Score);
         }
     }

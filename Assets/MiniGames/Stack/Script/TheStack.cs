@@ -30,6 +30,10 @@ namespace Stack
         private int maxCombo = 0;
         public int MaxCombo { get => maxCombo; }
 
+        // 목표 점수, 목표 점수에 따라 실패 성공이 갈림
+        private int goalScore = 10;
+        public int GoalScore { get { return goalScore; } }
+
         public Color prevColor;
         public Color nextColor;
 
@@ -40,6 +44,10 @@ namespace Stack
 
         int bestCombo = 0;
         public int BestCombo { get => bestCombo; }
+
+        // 목표 점수, 목표 점수에 따라 실패 성공이 갈림
+        private int goal = 10;
+        public int Goal { get => goal; }
 
         private const string BestScoreKey = "BestScore";
         private const string BestComboKey = "BestCombo";

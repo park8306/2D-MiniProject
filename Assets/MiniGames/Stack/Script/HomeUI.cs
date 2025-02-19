@@ -20,20 +20,13 @@ namespace Stack
             base.Init(uIManager);
 
             startButton = transform.Find("StartButton").GetComponent<Button>();
-            exitButton = transform.Find("ExitButton").GetComponent<Button>();
 
             startButton.onClick.AddListener(OnClickStartButton);
-            exitButton.onClick.AddListener(OnClickExitButton);
         }
 
         void OnClickStartButton()
         {
             uiManager.OnClickStart();
-        }
-
-        void OnClickExitButton()
-        {
-            uiManager.OnClickExit();
         }
     }
 }

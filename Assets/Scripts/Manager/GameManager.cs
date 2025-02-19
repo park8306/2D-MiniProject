@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     UIManager uiManager;
 
+    // 목표 점수, 목표 점수에 따라 실패 성공이 갈림
+    private int goalScore = 10;
+    public int GoalScore { get { return goalScore; } }
+
     // Start is called before the first frame update
     void Start()
     {

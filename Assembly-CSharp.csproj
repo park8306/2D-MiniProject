@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Object\MinigamePortal.cs" />
+    <Compile Include="Assets\MiniGames\Stack\Script\GameOverUI.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\MiniGames\Stack\Script\UIManager.cs" />
     <Compile Include="Assets\MiniGames\Stack\Script\GameUI.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\BaseUI.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\StackStartUI.cs" />
-    <Compile Include="Assets\MiniGames\Stack\Script\ScoreUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\FlappyPlaneResultUI.cs" />
