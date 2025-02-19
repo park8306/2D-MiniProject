@@ -61,16 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Object\MinigamePortal.cs" />
-    <Compile Include="Assets\MiniGames\Script\UIManager.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\Scripts\Player\AnimationHandler.cs" />
-    <Compile Include="Assets\MiniGames\Script\GameManager.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Prefabs.cs" />
-    <Compile Include="Assets\MiniGames\Script\BgLooper.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
-    <Compile Include="Assets\MiniGames\Script\Obstacle.cs" />
     <Compile Include="Assets\Scripts\UI\FlappyPlaneStartUI.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -79,13 +76,16 @@
     <Compile Include="Assets\Externals\SPUM\Script\Ect\SpritePos.cs" />
     <Compile Include="Assets\Externals\SPUM\Sample\Script\PlayerManager.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\GameManager.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\FollowCamera.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\BgLooper.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Button.cs" />
-    <Compile Include="Assets\MiniGames\Script\Player.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\BaseUI.cs" />
-    <Compile Include="Assets\MiniGames\Script\FollowCamera.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Externals\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_HorseSpriteList.cs" />
+    <Compile Include="Assets\MiniGames\Flappy\Script\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -93,7 +93,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\MiniGames\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\MiniGames\Sprites\tappyplane\Spritesheet\sheet.xml" />
+    <None Include="Assets\MiniGames\Flappy\Sprites\tappyplane\Spritesheet\sheet.xml" />
     <None Include="Assets\MiniGames\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_SDF.shader" />
@@ -105,7 +105,7 @@
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\MiniGames\Sprites\tappyplane\license.txt" />
+    <None Include="Assets\MiniGames\Flappy\Sprites\tappyplane\license.txt" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Externals\SPUM\ReadMe - 1.0.1.txt" />
@@ -123,7 +123,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\MiniGames\Sprites\tappyplane\Spritesheet\planes.xml" />
+    <None Include="Assets\MiniGames\Flappy\Sprites\tappyplane\Spritesheet\planes.xml" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\MiniGames\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
