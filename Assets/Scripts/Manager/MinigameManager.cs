@@ -11,7 +11,7 @@ public class MinigameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UnityEngine.Debug.Log(PlayerPrefs.GetInt("FlappyHighScore"));
     }
 
     // Update is called once per frame
