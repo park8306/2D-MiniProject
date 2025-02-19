@@ -5715,6 +5715,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5568045589960990931, guid: 2065ee54c1995b4428d6faac48e88954,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568045589960990931, guid: 2065ee54c1995b4428d6faac48e88954,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6382049197978197270, guid: 2065ee54c1995b4428d6faac48e88954,
         type: 3}
       propertyPath: minigame
