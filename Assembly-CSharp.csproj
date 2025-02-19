@@ -84,8 +84,10 @@
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_Button.cs" />
     <Compile Include="Assets\Scripts\UI\BaseUI.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\UI\BaseUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Externals\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\UI\FlappyPlaneResultUI.cs" />
     <Compile Include="Assets\Externals\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\Externals\SPUM\Script\SPUM_HorseSpriteList.cs" />
     <Compile Include="Assets\MiniGames\Flappy\Script\Player.cs" />

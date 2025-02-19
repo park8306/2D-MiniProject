@@ -27,6 +27,6 @@ public class FlappyPlaneStartUI : BaseUI
 
     protected override MinigameState GetMiniGameState()
     {
-        return MinigameState.Flappy;
+        return MinigameState.FlappyStart;
     }
 }

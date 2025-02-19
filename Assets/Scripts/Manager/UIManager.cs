@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,8 @@ using UnityEngine;
 public enum MinigameState
 {
     None,
-    Flappy,
+    FlappyStart,
+    FlappyResult,
     Stack,
     Count
 }
@@ -13,6 +15,7 @@ public enum MinigameState
 public class UIManager : MonoBehaviour
 {
     FlappyPlaneStartUI flappyUI;
+    FlappyPlaneResultUI flappyResultUI;
 
     private MinigameState minigameState;
 
@@ -20,6 +23,11 @@ public class UIManager : MonoBehaviour
     {
         flappyUI = GetComponentInChildren<FlappyPlaneStartUI>(true);
         flappyUI.Init(this);
+
+        flappyResultUI = GetComponentInChildren<FlappyPlaneResultUI>(true);
+        flappyResultUI.Init(this);
+
+        ChangeState(MinigameState.None);
     }
 
     public void SetMinigameState(MinigameState minigame)
@@ -31,10 +39,16 @@ public class UIManager : MonoBehaviour
     {
         minigameState = minigame;
         flappyUI.SetActive(minigameState);
+        flappyResultUI.SetActive(minigameState);
     }
 
     public void ActiveState()
     {
         flappyUI.SetActive(minigameState);
+    }
+
+    public void SetFlappyResultUI(int flappyCurrentScore, bool isGoalSuccess)
+    {
+        flappyResultUI.SetScore(flappyCurrentScore, isGoalSuccess);
     }
 }

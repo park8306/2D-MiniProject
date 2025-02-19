@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.RestService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +24,7 @@ namespace Flappy
         public int GoalScore { get { return goalScore; } }
 
         const string FlappyHighScoreKey = "FlappyHighScore";
+        const string FlappyGoalKey = "FlappyHighScore";
 
         private void Awake()
         {
@@ -65,12 +67,13 @@ namespace Flappy
             if (currentScore > highScore)
                 highScore = currentScore;
 
-            SaveScoreData();
+            SaveData();
         }
 
-        public void SaveScoreData()
+        public void SaveData()
         {
-            PlayerPrefs.SetInt(FlappyHighScoreKey, highScore);
+            bool isGoalSuccess = currentScore >= goalScore;
+            MinigameManager.Instance.SetFlappyData(currentScore, isGoalSuccess, true);
         }
 
         public bool CheckGoal()

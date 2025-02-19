@@ -2,26 +2,47 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEditor.Search;
 using UnityEngine;
 
+// 미니게임 결과들을 저장할 클래스
 public class MinigameManager : MonoBehaviour
 {
-    string path = "D:\\UnityProject\\Sparta\\FlappyPlane_Project\\Builds\\PC\\";
+    UIManager uiManager;
 
-    // Start is called before the first frame update
-    void Start()
+    public static MinigameManager Instance;
+
+    int flappyCurrentScore;    // 최고점수
+    public int FlappyCurrentScore { get => flappyCurrentScore; }
+    bool isFlappyGoalSuccess; // 목표 달성을 했는가? 
+    public bool IsFlappyGoalSuccess { get => isFlappyGoalSuccess; }
+
+    bool isFlappyPlayed;      // 미니게임을 플레이 했는가?
+    public bool IsFlappyPlayed { get => isFlappyPlayed; set => isFlappyPlayed = value; }
+
+    private void Awake()
     {
-        UnityEngine.Debug.Log(PlayerPrefs.GetInt("FlappyHighScore"));
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //UnityEngine.Debug.Log(path);
-            //Process.Start(path + "FlappyPlane.exe");
+        uiManager = FindObjectOfType<UIManager>();
 
-        }
+    }
+
+    public void SetFlappyData(int flappyCurrentScore, bool isGoalSuccess, bool isPlayed)
+    {
+        this.flappyCurrentScore = flappyCurrentScore;
+        this.isFlappyGoalSuccess = isGoalSuccess;
+        this.isFlappyPlayed = isPlayed;
     }
 }
