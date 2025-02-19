@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         if(IsMinigameZone && Input.GetKeyDown(KeyCode.Space))
         {
             // 미니게임 UI 실행
-            uiManager.ChangeState(MinigameState.FlappyStart);
+            uiManager.ActiveState();
         }
     }
 

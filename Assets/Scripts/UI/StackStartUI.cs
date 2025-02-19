@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class StackStartUI : MonoBehaviour
+public class StackStartUI : BaseUI
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button startButton;
+    [SerializeField] private Button exitButton;
+
+    public override void Init(UIManager uiManager)
     {
-        
+        base.Init(uiManager);
+        startButton.onClick.AddListener(OnClickStartButton);
+        exitButton.onClick.AddListener(OnClickExitButton);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClickStartButton()
     {
-        
+        SceneManager.LoadScene("Stack");
+    }
+    public void OnClickExitButton()
+    {
+        gameObject.SetActive(false);
+    }
+
+    protected override MinigameState GetMiniGameState()
+    {
+        return MinigameState.StackStart;
     }
 }

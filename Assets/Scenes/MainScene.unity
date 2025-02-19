@@ -992,6 +992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc30c887db86fda4b81fe79dadc798d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stackScore: {fileID: 1911185821}
+  goal: {fileID: 201280625}
+  OkButton: {fileID: 1156942588}
 --- !u!1 &201280623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,6 +1470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1649bb9784d9e3a45b53bf10eb86e5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startButton: {fileID: 1957188244}
+  exitButton: {fileID: 301737814}
 --- !u!1 &387437502
 GameObject:
   m_ObjectHideFlags: 0
