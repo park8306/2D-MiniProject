@@ -342,6 +342,8 @@ namespace Stack
                 PlayerPrefs.SetInt(BestScoreKey, bestScore);
                 PlayerPrefs.SetInt(BestComboKey, bestCombo);
             }
+            bool isGoal = Score >= GoalScore;
+            MinigameManager.Instance.SetStackData(Score, isGoal, true);
         }
 
         private void GameOverEffect()

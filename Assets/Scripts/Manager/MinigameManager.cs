@@ -29,7 +29,7 @@ public class MinigameManager : MonoBehaviour
     public bool IsStackGoalSuccess { get => isStackGoalSuccess; }
 
     bool isStackPlayed;      // 미니게임을 플레이 했는가?
-    public bool IsStackPlayed { get => isFlappyPlayed; set => isStackPlayed = value; }
+    public bool IsStackPlayed { get => isStackPlayed; set => isStackPlayed = value; }
 
     private void Awake()
     {
@@ -55,5 +55,11 @@ public class MinigameManager : MonoBehaviour
         this.flappyCurrentScore = flappyCurrentScore;
         this.isFlappyGoalSuccess = isGoalSuccess;
         this.isFlappyPlayed = isPlayed;
+    }
+    public void SetStackData(int stackCurrentScore, bool isGoalSuccess, bool isPlayed)
+    {
+        this.stackCurrentScore = stackCurrentScore;
+        this.isStackGoalSuccess = isGoalSuccess;
+        this.isStackPlayed = isPlayed;
     }
 }

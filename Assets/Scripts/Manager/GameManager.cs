@@ -49,34 +49,6 @@ public class GameManager : MonoBehaviour
         followCamera.SetCameraRange();
     }
 
-    private void SetAspectRatio()
-    {
-        float windowAspect = (float)Screen.width / Screen.height;
-        float scaleHeight = windowAspect / targetAspect;
-
-        Camera mainCam = Camera.main;
-
-        if(scaleHeight < 1.0f)
-        {
-            Rect rect = mainCam.rect;
-            rect.width = 1.0f;
-            rect.height = scaleHeight;
-            rect.x = 0;
-            rect.y = (1.0f - scaleHeight) / 2.0f;
-            mainCam.rect = rect;
-        }
-        else
-        {
-            float scaleWidth = 1.0f / scaleHeight;
-            Rect rect = mainCam.rect;
-            rect.width = scaleWidth;
-            rect.height = 1.0f;
-            rect.x = (1.0f - scaleWidth) / 2.0f;
-            rect.y = 0;
-            mainCam.rect = rect;
-        }
-    }
-
     // 진행한 미니게임이 있는지 체크
     public void CheckMiniGames()
     {
@@ -98,10 +70,10 @@ public class GameManager : MonoBehaviour
     {
         if (MinigameManager.Instance.IsStackPlayed)
         {
-            // flappy 결과창 출력
-            uiManager.ChangeState(MinigameState.FlappyResult);
-            uiManager.SetStackResultUI(MinigameManager.Instance.FlappyCurrentScore, MinigameManager.Instance.IsFlappyGoalSuccess);
-            MinigameManager.Instance.IsFlappyPlayed = false;
+            // stack 결과창 출력
+            uiManager.ChangeState(MinigameState.StackResult);
+            uiManager.SetStackResultUI(MinigameManager.Instance.StackCurrentScore, MinigameManager.Instance.IsStackGoalSuccess);
+            MinigameManager.Instance.IsStackPlayed= false;
         }
     }
 }
