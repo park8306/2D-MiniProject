@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
 
     private MinigameState minigameState;
 
+    GameObject npcTalkUI;
+
     private void Awake()
     {
         flappyUI = GetComponentInChildren<FlappyPlaneStartUI>(true);
@@ -38,6 +40,9 @@ public class UIManager : MonoBehaviour
         stackResultUI.Init(this);
 
         ChangeState(MinigameState.None);
+
+        npcTalkUI = transform.Find("NPCTalkUI").gameObject;
+        npcTalkUI.SetActive(false);
     }
 
     public void SetMinigameState(MinigameState minigame)
@@ -69,5 +74,10 @@ public class UIManager : MonoBehaviour
     public void SetStackResultUI(int stackCurrentScore, bool isGoalSuccess)
     {
         stackResultUI.SetScore(stackCurrentScore, isGoalSuccess);
+    }
+
+    internal void ActiveNPCTalk(bool isActive)
+    {
+        npcTalkUI.SetActive(isActive);
     }
 }

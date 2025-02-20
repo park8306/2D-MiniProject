@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isMinigameZone;    // 미니게임 존에 있는지 판단하는 변수
     public bool IsMinigameZone { get => isMinigameZone; set => isMinigameZone = value; }
 
+    [SerializeField] private bool isNPCZone;    // NPC 존에 있는지 판단하는 변수
+    public bool IsNPCZone { get => isNPCZone; set => isNPCZone = value; }
+
     UIManager uiManager;
 
     [SerializeField] GameObject alramUI;            // 상호 작용 키 알려주는 UI 오브젝트
@@ -47,6 +50,11 @@ public class PlayerController : MonoBehaviour
         {
             // 미니게임 UI 실행
             uiManager.ActiveState();
+        }
+        if (IsNPCZone && Input.GetKeyDown(KeyCode.Space))
+        {
+            // 미니게임 UI 실행
+            uiManager.ActiveNPCTalk(true);
         }
     }
 
@@ -81,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Portal"))
+        if(collision.CompareTag("Portal") || collision.CompareTag("NPC"))
         {
             alramUI.SetActive(true);
         }
@@ -89,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Portal"))
+        if (collision.CompareTag("Portal") || collision.CompareTag("NPC"))
         {
             alramUI.SetActive(false);
         }
