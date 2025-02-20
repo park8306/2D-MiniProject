@@ -19,12 +19,17 @@ public class FollowCamera : MonoBehaviour
 
         offset = transform.position - target.position; // 타겟에서 카메라의 거리를 계산
         Debug.Log(new Vector2(Screen.width, Screen.height));
-
-        // orthographicSize를 바탕으로 카메라 범위 구하기
-        height = Camera.main.orthographicSize;
-        width = height * ((float)Screen.width / Screen.height);
+        //SetCameraRange();
 
         Debug.Log("height:" + height + "widht :" + width);
+    }
+
+    public void SetCameraRange()
+    {
+        // orthographicSize를 바탕으로 카메라 범위 구하기
+        height = Camera.main.orthographicSize;
+        //width = height * ((float)Screen.width / Screen.height);
+        width = height * (1920.0f / 1080);
     }
 
     private void Update()

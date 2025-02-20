@@ -65,4 +65,9 @@ public class UIManager : MonoBehaviour
     {
         flappyResultUI.SetScore(flappyCurrentScore, isGoalSuccess);
     }
+
+    public void SetStackResultUI(int stackCurrentScore, bool isGoalSuccess)
+    {
+        stackResultUI.SetScore(stackCurrentScore, isGoalSuccess);
+    }
 }

@@ -18,6 +18,7 @@ public class StackStartUI : BaseUI
 
     public void OnClickStartButton()
     {
+        GameManager.Instance.SetStackResolution();
         SceneManager.LoadScene("Stack");
     }
     public void OnClickExitButton()

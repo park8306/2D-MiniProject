@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using UnityEditor.Search;
+
 using UnityEngine;
 
 // 미니게임 결과들을 저장할 클래스
@@ -12,13 +8,28 @@ public class MinigameManager : MonoBehaviour
 
     public static MinigameManager Instance;
 
-    int flappyCurrentScore;    // 최고점수
+    /// <summary>
+    /// Flappy
+    /// </summary>
+
+    int flappyCurrentScore;    // 현재점수
     public int FlappyCurrentScore { get => flappyCurrentScore; }
     bool isFlappyGoalSuccess; // 목표 달성을 했는가? 
     public bool IsFlappyGoalSuccess { get => isFlappyGoalSuccess; }
-
     bool isFlappyPlayed;      // 미니게임을 플레이 했는가?
     public bool IsFlappyPlayed { get => isFlappyPlayed; set => isFlappyPlayed = value; }
+
+    /// <summary>
+    /// Stack
+    /// </summary>
+
+    int stackCurrentScore;    // 현재점수
+    public int StackCurrentScore { get => stackCurrentScore; }
+    bool isStackGoalSuccess; // 목표 달성을 했는가? 
+    public bool IsStackGoalSuccess { get => isStackGoalSuccess; }
+
+    bool isStackPlayed;      // 미니게임을 플레이 했는가?
+    public bool IsStackPlayed { get => isFlappyPlayed; set => isStackPlayed = value; }
 
     private void Awake()
     {
