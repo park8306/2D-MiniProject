@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public bool IsMinigameZone { get => isMinigameZone; set => isMinigameZone = value; }
 
     UIManager uiManager;
+
+    [SerializeField] GameObject alramUI;            // 상호 작용 키 알려주는 UI 오브젝트
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+
+        alramUI.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -73,5 +77,21 @@ public class PlayerController : MonoBehaviour
     {
         movementDirection = inputValue.Get<Vector2>();
         movementDirection.Normalize();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Portal"))
+        {
+            alramUI.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Portal"))
+        {
+            alramUI.SetActive(false);
+        }
     }
 }

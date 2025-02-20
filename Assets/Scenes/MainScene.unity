@@ -1329,6 +1329,7 @@ MonoBehaviour:
   characterTr: {fileID: 1210297737169238109}
   speed: 3
   isMinigameZone: 0
+  alramUI: {fileID: 884883116}
 --- !u!61 &322233643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2241,6 +2242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004242206054737104, guid: 2065ee54c1995b4428d6faac48e88954,
+        type: 3}
+      propertyPath: m_TagString
+      value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 5504844188127107723, guid: 2065ee54c1995b4428d6faac48e88954,
         type: 3}
@@ -8613,6 +8619,11 @@ PrefabInstance:
     - target: {fileID: 1004242206054737104, guid: 2065ee54c1995b4428d6faac48e88954,
         type: 3}
       propertyPath: m_Name
+      value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004242206054737104, guid: 2065ee54c1995b4428d6faac48e88954,
+        type: 3}
+      propertyPath: m_TagString
       value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 5504844188127107723, guid: 2065ee54c1995b4428d6faac48e88954,
